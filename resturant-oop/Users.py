@@ -17,3 +17,7 @@ class Customer(User):
     def order(self,order):
         self.__order=order
     
+
+    def place_order(self,order):
+        self.order = order
+        print(f'{self.name} placed an order {order.items}')
