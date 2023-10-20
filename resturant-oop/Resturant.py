@@ -1,10 +1,10 @@
 class Resturant:
-    def __init__(self,name) -> None:
+    def __init__(self,name, menu=[]) -> None:
         self.name = name
         self.chef = None
         self.server = None
         self.manager = None
-        self.menu = []
+        self.menu = menu
         self.revenue = 0
         self.expense = 0
         self.balance = 0
