@@ -1,9 +1,10 @@
 class Resturant:
-    def __init__(self,name, menu=[]) -> None:
+    def __init__(self,name,rent, menu=[]) -> None:
         self.name = name
         self.chef = None
         self.server = None
         self.manager = None
+        self.rent = rent
         self.menu = menu
         self.revenue = 0
         self.expense = 0
@@ -25,7 +26,7 @@ class Resturant:
             self.due_amount = 0
             return amount - order.bill
         
-    def pay_expense(self,amount,description):
+    def pay_expense(self,amount,description,rent):
         if amount < self.balance :
             self.expense += amount
             self.balance -= amount

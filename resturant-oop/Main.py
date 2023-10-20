@@ -1,5 +1,5 @@
 from Menu import Pizza,Burger,Menu,Drinks
-
+from Resturant import Resturant
 def main():
    menu = Menu()
    pizza_1= Pizza('Naga pizza',600,'large',['naga','onion'])
@@ -23,5 +23,8 @@ def main():
 
    menu.show_menu()
 
+   restaurant = Resturant('Near_By_Restaurant',1000,menu)
+   
+   
 if __name__== '__main__':
   main() 
