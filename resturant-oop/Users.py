@@ -44,8 +44,13 @@ class Employee(User):
     def __init__(self, name, phone, email, address,salary,starting_date,department) -> None:
         super().__init__(name, phone, email, address)
         self.salary = salary
+        self.due = salary
         self.starting_date = starting_date
         self.department = department
+    
+    def received_salary(self):
+        self.due = 0
+
 
 class Chef(Employee):
     def __init__(self, name, phone, email, address, salary, starting_date, department,cooking_item) -> None:
@@ -62,12 +67,14 @@ class Server(Employee):
 
     def transfer_order_to_chef(self,order):
         pass
-    
+
 
     def serve_food(self,order):
         pass
 
-
     def receive_tips(self,amount):
         self.tips_earning += amount
 
+class Manager(Employee):
+    def __init__(self, name, phone, email, address, salary, starting_date, department) -> None:
+        super().__init__(name, phone, email, address, salary, starting_date, department)
