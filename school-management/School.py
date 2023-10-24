@@ -27,6 +27,8 @@ class ClassRoom:
     
     def add_Student(self,student):
         serial_id = f'{self.name}-{len(self.students)+1} '
+        student.id = serial_id
+        student.classroom = self.room
         self.students.append(student)
 
     def __str__(self) -> str:
@@ -35,5 +37,4 @@ class ClassRoom:
     #TODO: sort student by grade
     def got_top_students(self):
         pass
-    def col (self):
-        pass
+    

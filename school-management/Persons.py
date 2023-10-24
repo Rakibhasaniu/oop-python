@@ -21,3 +21,12 @@ class Teacher(Person):
 class Student(Person):
     def __init__(self, name) -> None:
         super().__init__(name)
+        self.__id = None
+        self.classroom = None
+
+    @property
+    def id(self):
+        return self.__id
+    
+    def id(self,value):
+        self.__id == value
