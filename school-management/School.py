@@ -18,12 +18,19 @@ class School:
             self.classrooms[classroom_name].add_Student(student)
         else:
             print(f'no classroom as named{classroom_name }')
-
+    def __repr__(self) -> str:
+        print('----------all class rooms----------')
+        for key ,value in self.classrooms.items():
+            print (key)
+            
+        return ''
 class ClassRoom:
     def __init__(self, name) -> None:
         self.name = name
         #composition
         self.students = []
+        self.subjects = []
+
     
     def add_Student(self,student):
         serial_id = f'{self.name}-{len(self.students)+1} '

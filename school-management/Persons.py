@@ -19,10 +19,12 @@ class Teacher(Person):
             #TODO: set marks for the subject for each student
 
 class Student(Person):
-    def __init__(self, name) -> None:
+    def __init__(self, name,classroom) -> None:
         super().__init__(name)
         self.__id = None
-        self.classroom = None
+        self.classroom = classroom
+        self.marks = {}
+        self.grade = None
 
     @property
     def id(self):
